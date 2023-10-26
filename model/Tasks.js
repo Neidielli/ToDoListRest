@@ -63,7 +63,7 @@ module.exports = {
     },
 
     deleteTask: function (id, callback) {
-        const deleteQuery = 'DELETE FROM task WHERE id = ?';
+        const deleteQuery = 'DELETE FROM tasks WHERE id = ?';
         connection.query(deleteQuery, [id], (error, results) => {
             if (error) {
                 callback(error, null);
